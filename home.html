@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Le site Javascript d'Ophélie</title>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="main.css">
+        <script src ="mon_premier_javas.js"></script>
+    </head>
+
+    <body>
+        <h1>Mon premier site avec JavaScript</h1>
+        <script>alert('Bienvenue sur mon site, merci de renseigner votre nom avant la navigation')
+        </script>
+        <p>C'est pas encore terrible mais on y travaille ;-)</p>
+        <button id='b1'>Cliquez moi pour renseigner votre nom!</button>
+        <button id='b2'>Ajouter une ligne</button>
+        <script>
+            let ajouter = document.getElementById('b2');
+            ajouter.addEventListener('click', ajout);
+            function ajout(){
+            let para = document.createElement('p');
+            para.textContent = 'Ligne ajoutée';
+            document.body.appendChild(para);
+                }
+        </script>
+    </body>
+</html>
+
